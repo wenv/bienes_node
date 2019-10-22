@@ -1,0 +1,22 @@
+version: '2'
+
+services:
+  web:
+    build: .
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    ports:
+      - '7777:7777'
+    links:
+      - mysql57
+
+  mysql57:
+    image: mysql:5.7
+    ports:
+      - '8080:8080'
+    environment:
+       MYSQL_ROOT_PASSWORD: simple
+    volumes:
+      - /data/db
+
