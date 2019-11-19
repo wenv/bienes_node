@@ -7,6 +7,7 @@
     "@babel/polyfill": "^7.6.0",
     "bcryptjs": "^2.4.3",
     "connect-flash": "^0.1.1",
+    "ejs": "^2.7.4",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "express-myconnection": "^1.0.4",
@@ -29,7 +30,7 @@
     "nodemon": "^1.19.4"
   },
   "scripts": {
-    "dev": "nodemon src/"
+    "dev": "nodemon nv/app.js"
   },
   "keywords": [],
   "author": "",
