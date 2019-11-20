@@ -26,6 +26,8 @@ app.use(myConection(mysql, {
     database: 'data_bienes'
 }, 'single'));
 
+app.use(express.urlencoded({extended: false}));
+
 //routes
 app.use('/', custome);
 

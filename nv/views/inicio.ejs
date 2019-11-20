@@ -1,0 +1,63 @@
+<% include partials/header %>
+
+<div class="container">
+    <div class="row mt-5" >
+        <div class="col-md-7">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>CI</th>
+                        <th>ACTIONS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% if (data) { %>
+                        <% for (var i=0 ; i< data.length; i++) { %>
+                            <tr>
+                                <td><%= data[i].nombre%></td>
+                                <td><%= data[i].apellido%></td>
+                                <td><%= data[i].CI%></td>
+                                <td>
+                                    <a href="/delete/<%= data[i].id%>" class="btn btn-danger">DELETE</a>
+                                    <a href="/update/<%= data[i].id%>" class="btn btn-danger">UPDATE</a>
+                                
+                                </td>
+                            </tr> 
+                        <% } %>
+
+                   <% } %>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-body">
+                        <form action ="/add" method="POST"> 
+                            <div class="form-group">
+                                <input type="text" name="username" placeholder="Usuario" class="form-control"> 
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="nombre" placeholder="Nombre" class="form-control"> 
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="apellido" placeholder="Apellido" class="form-control"> 
+                            </div>
+                            <div class="form-group">
+                                    <input type="text" name="CI" placeholder="ci" class="form-control"> 
+                            </div>
+                            <div class="form-group">
+                                    <input type="text" name="password" placeholder="contraseña" class="form-control"> 
+                            </div>
+                            <button type="submit" class="btn-primary"> INGRESAR</button>
+                        </form>
+                </div>
+            </div>
+                
+        </div>
+    </div>
+</div>
+
+
+<% include partials/footer %>
