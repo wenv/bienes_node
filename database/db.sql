@@ -10,6 +10,15 @@ CREATE TABLE users(
     apellido VARCHAR(70) NOT NULL,
     CI VARCHAR(15) NOT NULL
 );
+
+CREATE TABLE pedido(
+    id INT(11) NOT NULL,
+    para VARCHAR(16) NOT NULL,
+    seccion VARCHAR(60) NOT NULL,
+    al_alm VARCHAR(50) NOT NULL,
+    para_uso VARCHAR(70) NOT NULL,
+    fecha timestamp NOT NULL DEFAULT current_timestamp,
+);
 ALTER TABLE users
   ADD PRIMARY KEY (id);
 

@@ -1,0 +1,61 @@
+<% include partials/header %>
+<div class="container">
+    
+    <div class="row mt-3">
+        <form action="/add/tabped"  method="POST">
+            <div class="form-group">
+                <input type="text" name="ped" placeholder="PEDIDA" autofocus class="form-control" > 
+            </div>       
+            <div class="form-group">
+                <input type="text" name="aprob" placeholder="APROBADA" autofocus class="form-control" >                        
+            </div>        
+            <div class="form-group">
+                <input type="text" name="unid" placeholder="UNIDAD" autofocus class="form-control" > 
+            </div>             
+            <div class="form-group">
+                    <input type="text" name="art" placeholder="ARTICULO" autofocus class="form-control" >
+            </div>
+            <div class="form-group">
+                    <input type="text" name="ubica" placeholder="UBICACION" autofocus class="form-control" > 
+                </div> 
+            <div class="form-group">
+                    <input type="text" name="codigo" placeholder="CODIGO" autofocus class="form-control" >
+            </div> 
+            <div class="form-group">
+                <input type="text" name="n_inter" placeholder="n° INTERNO" autofocus class="form-control" >
+            </div> 
+            <div class="form-group">
+                <input type="text" name="val_unit" placeholder="VALOR" autofocus class="form-control" > 
+            </div>                   
+            <div class="form-group">             
+                <input type="text" name="total" placeholder="TOTAL" autofocus class="form-control" >               
+            </div>
+            <button type="submit" class="btn-primary"> INGRESAR</button>
+            
+        </form>
+    </div>
+</div>
+<div class="container">
+        <div class="row mt-3">
+           
+                <table class="table table-bordered table-hover">
+                        <thead>
+                               <tr>
+                                       <td colspan="2">CANTIDAD             
+                                       </td>
+                                       <td >UNIDAD</td>
+                                       <td colspan="3">DETALLE </td>
+                                       <td >N° INTERNO</td>
+                                       <td >VALOR UNITARIO</td>
+                                       <td >TOTAL</td>
+                               </tr>                   
+                        </thead>
+                        <tbody>
+                             
+       
+                        </tbody>                   
+                 </table>
+
+         </div>
+</div>
+<% include partials/footer %>

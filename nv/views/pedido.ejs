@@ -1,0 +1,120 @@
+<% include partials/header %>
+<div class="container">
+    <div class="row mt-5">
+            <div class="col-md-5">
+                    <div class="card">
+                        <div class="card-body">
+                                <form action ="/add/ped" method="POST"> 
+                                    <div class="form-group">
+                                      <input type="text" name="de" placeholder="De:" autofocus class="form-control" > 
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="seccion" placeholder="Seccion:" class="form-control"> 
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="al_alm" placeholder="Al Almacen:" class="form-control"> 
+                                    </div>
+                                    <div class="form-group">
+                                            <input type="text" name="para" placeholder="Para Uso en" class="form-control"> 
+                                    </div>
+                                    <div class="form-group">
+                                            <input type="text" name="ped_por" placeholder="PEDIDO POR" class="form-control"> 
+                                    </div>
+                                    <div class="form-group">
+                                            <input type="text" name="aprob" placeholder="APROBADO" class="form-control"> 
+                                    </div>
+                                    <div class="form-group">
+                                            <input type="text" name="autorizado" placeholder="AUTORIZADO" class="form-control"> 
+                                    </div>
+                                    <button type="submit" class="btn-primary"> INGRESAR</button>
+                                 
+                                </form>
+                        </div>
+                    </div>
+                        
+                </div>
+       
+        <div class="col-md-2">
+        <form action="" method="POST">
+                        <table class="table table-bordered table-hover" >
+                                        <thead>
+                                                 <tr class="table100-head">
+                                                        <th class="column1">De</th>
+                                                        <th class="column2">Seccion</th>
+                                                        <th class="column3">Al Almacen</th>
+                                                        <th class="column4">Para</th>
+                                                        <th class="column5">Pedido</th>
+                                                        <th class="column6">Aprobado</th>
+                                                        <th class="column7">Autorizado</th>
+                                                        <th class="column8">ACCIONES</th>
+                                                </tr>
+                                        </thead>
+                                        <tbody>
+                                                <% if (data) { %>
+                                                        <% for (var i=0 ; i< data.length; i++) { %>
+                                                                <tr>
+                                                                        <td class="column1"><%= data[i].de%></td>
+                                                                        <td class="column2"><%= data[i].seccion%></td>
+                                                                        <td class="column3"><%= data[i].al_alm%></td>
+                                                                        <td class="column4"><%= data[i].para%></td>
+                                                                        <td class="column5"><%= data[i].ped_por%></td>
+                                                                        <td class="column6"><%= data[i].aprob%></td>
+                                                                        <td class="column7"><%= data[i].autorizado%></td>
+                                                                        <td>
+                                                                         <a href="/update/<%= data[i].id%>" class="btn btn-info">UPDATE</a>
+                                                                         <a href="/tabped" class="btn btn-info">TABLA</a>
+                                
+                                                                        </td>
+                                                                    </tr> 
+                                                                <% } %>
+                                        
+                                                           <% } %>                    
+                                                                                
+                                        </tbody>
+                                                       
+                        </table>
+                </form>
+                                           
+                </div>
+                         
+         </div>
+                           
+</div>
+<div class="container">
+    
+        <div class="row mt-3">
+            <form action=""  method="POST">
+                <div class="form-group">
+                    <input type="text" name="ped" placeholder="PEDIDA" autofocus class="form-control" > 
+                </div>       
+                <div class="form-group">
+                    <input type="text" name="aprob" placeholder="APROBADA" autofocus class="form-control" >                        
+                </div>        
+                <div class="form-group">
+                    <input type="text" name="unid" placeholder="UNIDAD" autofocus class="form-control" > 
+                </div>             
+                <div class="form-group">
+                        <input type="text" name="art" placeholder="ARTICULO" autofocus class="form-control" >
+                </div>
+                <div class="form-group">
+                        <input type="text" name="ubica" placeholder="UBICACION" autofocus class="form-control" > 
+                    </div> 
+                <div class="form-group">
+                        <input type="text" name="codigo" placeholder="CODIGO" autofocus class="form-control" >
+                </div> 
+                <div class="form-group">
+                    <input type="text" name="n_inter" placeholder="n° INTERNO" autofocus class="form-control" >
+                </div> 
+                <div class="form-group">
+                    <input type="text" name="val_unit" placeholder="VALOR" autofocus class="form-control" > 
+                </div>                   
+                <div class="form-group">             
+                    <input type="text" name="total" placeholder="TOTAL" autofocus class="form-control" >               
+                </div>
+                <button type="submit" class="btn-primary"> INGRESAR</button>
+                
+            </form>
+        </div>
+    </div>                     
+                               
+<% include partials/footer %>
